@@ -32,8 +32,8 @@ class GmailEmailSender(object):
 
     def __log_into_mail(self):
         """
-        Logs in mail server. Excepting SMTPAuthenticationError.
-        Return self or Error Class.
+        Logs in the mail server. Excepting SMTPAuthenticationError.
+        Return self or Error Class.     
         """
         try:
             self.server.login(self.email_owner, self.__password)
@@ -48,7 +48,7 @@ class GmailEmailSender(object):
     
     def send_information(self, receiver_email, msg):
         """
-        Sends email to provided reciver. 
+        Sends email to the provided receiver. 
         """
         str_message = self.__create_message(
             receiver_email, msg

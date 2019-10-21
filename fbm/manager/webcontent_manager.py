@@ -13,14 +13,13 @@ class WebContentManager(ABC):
     @abstractclassmethod
     def sign_in(self):
         """
-        Signs in provided webpage. Abstract method - need to be overwrited.
-
+        Signs in to the provided webpage. Abstract method - need to be overwritten.
         """
         raise NotImplementedError("Must implement sign_in method.")
 
     def browser_with_options(self):
         """
-        As default returns headless Chrome webdriver.
+        As default returns headless Chrome web driver.
 
         """
         chrome_options = webdriver.ChromeOptions()
@@ -35,8 +34,8 @@ class WebContentManager(ABC):
     @staticmethod
     def redirect_to_website(browser, site):
         """
-        Redirects you to provided websire. Static method, you can use it
-        on differetn sites, eg. "facebook, messenger, instagram".
+        Redirects you to a website. The static method, you can use it
+        with different sites, eg. "Facebook, Messenger, Instagram".
 
         """
         browser.get(site)
@@ -52,7 +51,7 @@ class WebContentManager(ABC):
 
     def close_browser_connection(self):
         '''
-        This function closes browser.
+        This function closes the browser.
         
         '''
         self.browser.close()
