@@ -18,7 +18,7 @@ class FbGroupContentManager(FbContentManager):
     
     def redirect_to_group(self):
         '''
-        This function redirects us to group page and scrolls page to half of the page.
+        This function redirects us to the group page and scrolls page to half of the page.
         
         '''
         self.browser.get(self.webpage + '/groups/' + self.fb_group_id)
@@ -28,7 +28,7 @@ class FbGroupContentManager(FbContentManager):
     @except_element_errors
     def check_new_members(self):
         '''
-        This function finds section with number of new users 
+        This function finds a section with the number of new users 
         and returns TRUE if it is more than 40.
 
         '''
@@ -40,7 +40,7 @@ class FbGroupContentManager(FbContentManager):
     @except_element_errors
     def write_post(self):
         '''
-        This writes welcome message to new group fans.
+        This method writes a welcome message to new group fans.
 
         '''
         if self.check_new_members() == True:
@@ -63,7 +63,7 @@ class FbGroupContentManager(FbContentManager):
     @except_element_errors
     def invite_people_to_group(self):
         '''
-        This function finds elements with 'INVITE' button and clicks on each.
+        This function finds elements with the 'INVITE' button and clicks on each.
 
         '''
         element = self.browser.find_element_by_xpath("//div[@class='_6a rfloat _ohf']")
@@ -80,7 +80,7 @@ class FbGroupContentManager(FbContentManager):
     @except_element_errors
     def approve_new_users(self):
         '''
-        This function finds elements with 'INVITE' button and clicks on each.
+        This function finds elements with 'pending users' button and clicks on each.
 
         '''
         self.browser.execute_script('window.scrollTo(0,100)')

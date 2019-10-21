@@ -6,8 +6,8 @@ from selenium.common.exceptions import StaleElementReferenceException
 
 def run_app(headless_option: bool=False):
     '''
-    The full process of managing group page.
-    Additionaly you will recive information trough email with number of invitations sent.
+    The full process of the managing group page.
+    Additionally, you will receive information trough email with a number of invitations sent.
     '''
 
     fb_pass = os.environ.get('FB_PASS')
