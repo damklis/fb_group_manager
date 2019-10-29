@@ -58,7 +58,7 @@ class FbGroupContentManager(FbContentManager):
             time.sleep(self._sleep_seconds)
             post_button.click()
         else:
-            self.check_new_members()
+            print("There are no new users.")
     
     @except_element_errors
     def invite_people_to_group(self):
