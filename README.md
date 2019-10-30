@@ -22,7 +22,7 @@ $ pip install -r requirements.txt
 In ```app.py``` insert your configuration data like Gmail etc. 
 You can specify the headless option of webdriver (useful for debugging).
 
-Run the app with this commend. 
+Run the app with this command. 
 
 ```sh
 $ python -m fbm
