@@ -21,8 +21,3 @@ def except_element_errors(function):
             print(w)
 
     return func_wrapper
-
-
-
-
-  

@@ -41,6 +41,3 @@ class FbContentManager(WebContentManager):
     
     def __str__(self):
         return f"Content Manager of website: {self.webpage}."
-
-
-
